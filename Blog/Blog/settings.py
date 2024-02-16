@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-x^+fwp4dv3$e*1#m3r_fui^-wn8@5_xb@n!*ulrn$y-lm#sqy(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['localhost','127.0.0.1','blogappdjango.up.railway.app']
 
 
 # Application definition
@@ -72,6 +72,11 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Blog.wsgi.application'
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000/",
+    "https://blogappdjango.up.railway.app"
+]
 
 
 # Database
